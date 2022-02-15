@@ -1,0 +1,425 @@
+\chapter{Premier principe de la thermodynamique}
+
+\section{Modèle des gaz parfaits}
+
+Le modèle des gaz parfaits est considéré tel quel, car il correspond à un gaz idéal dans des conditions particulières, nous permettant de négliger certaines interactions. Ce modèle est basé sur trois hypothèses :
+\begin{enumerate}
+\item Les atomes et molécules sont des sphères dures
+\item L'énergie d'interaction est nulle, et la seule contribution énergétique est l'énergie cinétique de nos sphères dures.
+\item La pression est due aux chocs élastiques entre les molécules et les parois.
+\end{enumerate}
+
+L'application de ces hypothèses entraîne une répartition des molécules uniformes, et une distribution des vitesses dans l'enceinte homogène, on parle d'enceinte \textbf{isotrope}. On a donc $\braket{v_x^2}=\braket{v_y^2}=\braket{v_z^2}$. On appellera ainsi $\braket{v^2}$, la vitesse quadratique moyenne.
+
+\subsection{Propriétés macroscopiques, équations d'état et chaleur interne}
+
+Comme énoncé plus tôt, une fonction d'état est égale à 0. Celle s'appliquant aux gaz parfaits s'écrit donc :
+$$f(P,V,T)=0$$
+Mais en réalité on peut le définir sous une autre forme.
+\begin{definition}{Equation des gaz parfaits}
+\begin{equation}
+PV=nRT
+\end{equation}
+Avec $P$ la pression (en $Pa$),$V$ le volume (en $m^3$), $T$ la température (en $K$), $n$ la quantité de matière (en $mol$), et $R$ la constante des gaz parfaits telle que $R=8,314J.K^{-1}.mol^{-1}$.
+
+\end{definition}
+
+\begin{remark}
+A noter que la constante des gaz parfaits peut se décomposer en deux autres constantes telle que :
+\begin{equation}
+R=k_B.\mathcal{N}_A
+\end{equation}
+\end{remark}
+
+Tel que $\mathcal{N}_A=6,022;10^{23} ~mol^{-1}$; la constante d'Avogadro, et $k_b=1,38.10^{-22}~J.K^{-1}$, la constante de Boltzmann.\\
+
+\begin{proposition}
+On pose une convention des thermodynamiciens qu'on appelle les conditions standard, telle que :
+$$T_0=0^{\circ}C \equiv 273,15~K \textrm{ et } P_0=1,01325.10^5~Pa$$
+\end{proposition}
+
+
+On notera qu'une mole d'air dans ces conditions occupe un volume de $22,4~L$, voit $V_m(air)=22,4~L.mol^{-1}$. \\
+
+Introduisons ici une nouvelle grandeur, intitulée \textbf{énergie interne}, ou énergie microscopique.
+
+\begin{definition}[Energie interne]
+
+On appelle énergie interne, ou énergie microscopique, notée $U$, la somme des énergie que possède un corps, c'est-à-dire la somme de l'énergie cinétique microscopique ainsi que les énergies potentielles d'interactions composant ce corps. Celle-ci dans le cas des gaz parfaits, sera définie telle que 
+$$U=N\braket{k}$$
+
+Tel que $\braket{k}$ est l'énergie cinétique moyenne de nos molécules $\braket{k}=\frac{3}{2} k_B T$.
+
+\end{definition}
+
+\subsection{Propriétés microscopiques}
+
+Déterminons maintenant l'énergie cinétique moyenne d'un gaz monoatomique :
+$$U=N\braket{k}=N\braket{\frac{3}{2}k_BT}$$
+$$\Rightarrow U = \frac{3}{2} N k_B T \textrm{ soit pour }N=\mathcal{N}_A U = \frac{3}{2}\mathcal{N}_Ak_BT=\frac{3}{2}RT$$
+Ainsi, pour un gaz parfait monoatomique, de $n$ moles
+$$ U=\frac{3}{2}nRT $$
+
+De façon générale, pour un gaz parfait, on ajoutera $\frac{1}{2}k_BT$  par degrés de libertés supplémentaire. Soit, pour une molécule ou un atome :
+\begin{itemize}
+\item pour un gaz diatomique, à 5 degrés de libertés, 
+$$U=\frac{5}{2}k_BT$$
+\item Pour un gaz diatomique sensible à la température,
+$$U=\frac{7}{2}k_BT$$
+\end{itemize}
+
+Si on considère un système à$n$ particules différentes, alors on aura :
+$$P_i=\frac{RT}{V}=\frac{k_BTN_i}{V} \Rightarrow N_i=\frac{P_iV}{k_BT}$$
+Or,
+$$N=\sum N_i = \frac{V}{k_BT}\sum P_i=\frac{PV}{k_BT}$$
+
+\pagebreak 
+
+On en déduit ainsi la \textbf{loi de Dalton}
+
+\begin{theorem}[Loi de Dalton]
+Pour tout gaz parfait, on considère que la pression d'un système gazeux est égale à la somme des pressions partielles de chacun de ces gaz pris indépendemment, tel que
+\begin{equation}
+P=\sum P_i
+\end{equation}
+\end{theorem}
+
+\begin{remark}
+On notera que la valeur de la pression partielle est donnée par la relation suivante
+ \begin{equation}
+ P_i=\frac{n_i}{n_{tot}}P_0
+ \end{equation}
+ \end{remark}
+
+\subsection{Notion de gaz réel}
+
+Si l'on cherche à améliorer le modèle des gaz parfaits, il est nécessaire de prendre en compte les interactions entre nos particules. C'est Van Der Waals, qui en 1873 étudie les gaz réels, et met en exergue le fait que quand le volume offert au gaz varie, c'est uniquement ce volume qui varie. Il existe un volume minimal incompressible : le \textbf{covolume}, noté $b$. Et puis, il existe aussi une pression moléculaire, notée $\pi$ telle que $\pi=\frac{a}{v^2}$. On définit ainsi l'équation de Van Der Waals :
+\begin{equation}
+\left (P + \frac{a}{V^2}\right )(V-b)=RT
+\end{equation}
+Que l'on peut aussi noter :
+\begin{equation}
+\left (P+\frac{an^2}{V_m^2}\right )(V_m-bn)=RTn
+\end{equation}
+
+\section{Énergie interne, travail et chaleur}
+
+\subsection{Énergie interne}
+
+En mécanique, et plus spécifiquement dans le domaine de l'énergétique, on définit l'énergie mécanique de notre système comme la somme de l'énergie cinétique et l'énergie potentielle, modèle ne prenant bien évidemment pas en compte l'action des forces non conservatives, en particulier les frottements, qui entraînent un échauffement fonction de la température. Cette énergie, microscopique, est appelée énergie interne.\\
+
+L'énergie interne est, elle même, fonction de deux paramètres que sont l'énergie microscopique cinétique et l'énergie  microscopique de configuration.\\
+
+\begin{proposition}[Expression différentielle de l'énergie interne]
+L'énergie interne, notée $U$, est une fonction d'état telle que $U(P,V,T)$ et sa différentielle est 
+\begin{equation}
+dU=\left (\frac{\partial U}{\partial V}\right )_{T,P}dV+\left (\frac{\partial U}{\partial P}\right )_{T,V}dP+\left (\frac{\partial U}{\partial T}\right )_{V,P}dT
+\end{equation}
+\end{proposition}
+
+\subsection{Travail}
+
+Une des autres grandeurs importante en thermodynamique est le travail.
+
+\begin{definition}[Travail]
+Le travail $W$ est une forme d'énergie mécanique, et qui, à l'échelle microscopique est une énergie ordonnée. Le travail, à l'équilibre, c'est-à-dire pour une pression $P$ égale à la pression extérieure $P_{ext}$. Le travail s'exprime ainsi tel que :
+$$\delta W = F.dx =\frac{F}{S}S.dx=P.dV$$
+\end{definition}
+
+\begin{proposition}[Convetion de signe du travail]
+Par convention, pour que le travail fourni soit positif et celui cédé négatif, on écrira :
+\begin{equation}
+\delta W = -P.dV
+\end{equation}
+\end{proposition}
+
+On généralisera, pour une pression dans notre système constante :
+\begin{equation}
+W=-P_{ext}\int dV
+\end{equation}
+
+\subsection{Chaleur}
+
+La chaleur correspond à un transfert d'énergie, résultat d'une différence de température. Quand on met en contact, une source froide avec une source chaude, on a alors un transfert de chaleur $Q$, se faisant de la source chaude vers la source froide. $Q$ est proportionnel à la variation de température $\Delta T$, cette énergie est donc désordonnée.\\
+
+\begin{definition}[Chaleur massique]
+On définit la chaleur massique telle que la quantité de chaleur nécessaire pour augmenter la température de $1~K$ par unité de masse :
+\begin{equation}
+Q=m.C.\Delta T
+\end{equation}
+Avec $C$, la capacité calorifique massique, en $J.K^{-1}.kg^{-1}$.\\
+\end{definition}
+
+De même, on définit la chaleur latente $L$, comme la chaleur nécessaire pour observer un changement d'état, telle que :
+\begin{equation}
+Q_L=mL
+\end{equation}
+
+\section{Premier principe de la thermodynamique}
+
+Le premier principe de la thermodynamique est une loi phénoménologique, qui ne se démontre donc pas. 
+
+\begin{theorem}[Premier principe de la thermodynamique]
+Pour un système considéré, la variation de son énergie interne est égale à la somme de la chaleur et du travail échangé, soit
+\begin{equation}
+\Delta U=W+Q
+\end{equation}
+\end{theorem}
+
+Il est basé sur le principe de conservation, tel que isolé, $Q=0$, $W=0$, et donc $\Delta U=0$. On notera que $W$ et $Q$ ne sont pas des fonctions d'états contrairement à $U$, c'est pourquoi, on a :
+$$dU=\delta W + \delta Q$$
+Que l'on peut aussi écrire, 
+$$dU=-PdV +\delta Q$$
+Dans le cadre d'une transformation \textbf{isochore}, on aura : 
+$$dU=\delta Q_v$$
+Dans le cadre d'une transformation \textbf{isobare}, on aura 
+$$dU=\delta Q_p + \delta W \Leftrightarrow \delta Q_p=dU-\delta W = dU + PdV$$
+
+\subsection{Enthalpie}
+
+Pour décrire des changements d'états mis en jeu par un système, on introduit une nouvelle grandeur, dont la dimension est celle d'une énergie, utilisée en physique, chimie mais aussi dans les mécanismes biologiques : c'est \textbf{l'enthalpie}.
+
+\begin{definition}[Enthalpie]
+Soit la fonction d'état, \textbf{enthalpie}, notée $H$, et égale à la somme de l'énergie interne contenue dans notre système ainsi que le produit de la pression et du volume (de dimension énergétique aussi), telle que
+\begin{equation}
+H=U+PV
+\end{equation}
+\end{definition}
+On en déduit l'équation différentielle :
+$$dH=dU+PdV+VdP$$
+$$\Leftrightarrow dH=\delta W + \delta Q + PdV + VdP$$
+$$\Leftrightarrow dH = -PdV + \delta Q + PdV + VdP$$
+$$\Leftrightarrow dH = \delta Q + VdP$$
+
+dans le cadre d'une réaction isobare, on aura $dP=0$, et donc $dH = \delta Q_p$.\\
+
+De façon générale, on pourra aussi noter l'enthalpie telle que :
+$$dH = -P_{ext}dV + \delta Q + PdV + VdP$$
+$$ dH = \delta Q + VdP + dV(P-P_{ext})$$
+
+\subsection{Capacités calorifiques et relation de Mayer}
+
+Nous pouvons maintenant, à partir de l'expression de nos deux fonctions d'états, définir les \textbf{capacités calorifiques}, notées $C_v$ et $C_p$. 
+
+\begin{definition}[Capacités calorifiques]
+Une capacité calorifique ou capacité thermique, est une grandeur mesurant la chaleur nécessaire pour augmenter d'un kelvin un corps d'un gramme ou d'une mole en fixant un paramètre. On la mesure donc en $J.K^{-1}$. Il en existe une expression générale pour un paramètre $X$ telle que :
+\begin{equation}
+C_X=T\left ( \frac{\partial S}{\partial T}\right ) _X
+\end{equation}
+Où $S$ est l'entropie, une variable d'état que l'on définira au chapitre suivant.
+\end{definition}
+
+Les deux capacités calorifiques les plus utilisées sont celles à pression constante et à volume constant.
+
+\begin{proposition}[Capacités à pression et volume constants]
+
+Soit $C_p$ la capacité calorifique à pression constante et $C_v$ la capcité calorifique à volume constant, on a
+
+\begin{equation}
+C_v=\left ( \frac{\partial U}{\partial T}\right ) _V \textrm{ et } C_p= \left ( \frac{\partial H}{\partial T}\right ) _P
+\end{equation}
+\end{proposition}
+
+
+Pour un gaz parfait, on retiendra :
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Gaz parfait&Monoatomique&Diatomique\\
+\hline
+$C_v$&$\frac{3}{2}R$&$\frac{5}{2}R$\\
+\hline
+$C_p$&$\frac{5}{2}R$&$\frac{7}{2}R$\\
+\hline
+\end{tabular}
+\end{table}
+
+On peut ainsi en déduire les expressions des enthalpies et des énergies internes telles que :
+$$dU=n.C_v.dT$$
+$$dH=n.C_p.dT$$
+
+Si on continue à se focaliser sur ces capacités calorifiques, nous pouvons introduire la \textbf{relation de Mayer}.\\
+
+\begin{theorem}[Relation de Mayer]
+Pour des gaz parfaits, la différence de la capacité calorifique à pression constante avec celle à volume constant est égal à la constante des gaz parfaits, soit
+\begin{equation}
+C_p - C_v = R
+\end{equation}
+Pour des capacités calorifiques molaires exclusivement.
+\end{theorem}
+
+\subsection{Transformation adiabatique et relation de Laplace}
+
+Définissons ici tout d'abord ce qu'est une réaction adiabatique, que l'on peut observer par exemple dans un thermos, qui est un système que l'on peut considérer comme adiabatique.
+
+\begin{definition}[Transformation adiabatique]
+
+La transformation adiabatique est une transformation quasi-statique définie telle que la chaleur échangée est nulle. 
+\end{definition}
+
+Dans le cadre d'une transformation adiabatique et avec des gaz parfaits, on peut utiliser une relation appelée Loi de Laplace.\\
+
+\begin{theorem}[Loi de Laplace]
+Dans le cadre d'une transformation adiabatique d'un gaz parfait, on peut poser le produit de la pression et du volume élevé à une puissance $\gamma$ égale à une constante, telle que
+\begin{equation}
+PV^{\gamma}=cste
+\end{equation}
+On posera alors $\gamma = \frac{C_p}{C_v}$
+\end{theorem}
+
+\section{Application du premier principe aux réactions chimiques}
+
+Définissons l'énergie interne de réaction et l'enthalpie de réaction, deux grandeurs thermochimiques qui permettent de décrire les échnages d'énergies au cours d'une réaction chimique.
+
+\begin{definition}[Energie interne et enthalpie de réaction]
+On définit les variables d'état de réaction comme les énergies mises en causes durant des réactions chimiques. Ainsi, on pourra quantifier ces variations d'énergie interne et d'enthalpie au cours d'une réaction tel que
+\begin{equation}
+\Delta_rU=Q_v \textrm{   et   } \Delta_rH=Q_p
+\end{equation}
+\end{definition}
+
+Ces deux relations sont fonction de l'avancement $\xi$ de notre réaction. Ainsi, on peut généraliser nos formules telles que :
+$$\Delta_rU=\Delta_rU_m . \xi = Q_v$$
+$$\Delta_rH=\Delta_rH_m . \xi = Q_p$$
+
+On peut par la suite introduire la \textbf{Loi de Hess}, qui exprime nos enthalpies et énergies internes de réactions à partir des enthalpies et énergies internes molaires de nos réactions chimiques. Ainsi, pour $i$ réactifs, $j$ produits, et $\nu$ leurs coefficients stoechiométriques respectifs, tels que  :
+$$\nu_1r_1+\nu_2r_2+...+\nu_ir_i \rightleftharpoons \nu_1p_1+\nu_2p_2+...+\nu_jp_j$$
+
+\begin{theorem}[Loi de Hess]
+
+La variation d'énergie interne ou la variation d'enthalpie est égale respectivement à la différence entre les énergies internes molaires portées par les produits et celle des réactifs, et identiquement avec les enthalpies, soit
+
+\begin{equation}
+\Delta_rU_m=\sum_j\nu_jU_m(j)-\sum_i\nu_iU_m(i)
+\end{equation}
+\begin{equation}
+\Delta_rH_m=\sum_j\nu_jH_m(j)-\sum_i\nu_iH_m(i)
+\end{equation}
+
+\end{theorem}
+
+D'autre part, on sait que $H=U+PV$, soit $\Delta_rH_m=\Delta_rU_m + \Delta_r(PV)$. Or, dans le cadre où l'on peut considérer que $V_{gaz} \gg V_{liquide}, V_{solide}$, on peut écrire que $\Delta_r(PV) \simeq \Delta_r(PV(i, gaz))$ On peut ainsi démontrer la formule suivante :
+\begin{equation}
+\Delta_rH_m=\Delta_rU_m+\left ( \sum_j\nu_j (gaz) - \sum_i\nu_i (gaz)\right ).RT
+ \end{equation}
+
+\begin{proposition} 
+En chimie, et donc en thermochimie, on pose une enthalpie molaire de réaction de référence standard, définie dans des conditions spécifiques :
+$$ P_0=P_{standard}=10^5~Pa$$
+$$T_{standard}=298,15~K \equiv 25^{\circ}C$$
+\end{proposition}
+
+Ainsi, l'enthalpie molaire de réaction standard est définie telle que
+\begin{equation}
+\Delta_rH_m^0=\sum_j\nu_jH_m^0(j)-\sum_i\nu_iH_m^0(i)
+\end{equation}
+
+La convention d'échelle des enthalpies détermine que, dans son état le plus stable, un corps pur simple possède une enthalpie :
+$$H_m^0(X_{\alpha})=0$$
+
+Si on introduit maintenant une nouvelle grandeur $\Delta_fH_m^0$, appelée enthalpie molaire de formation, correspondant à l'énergie des corps simples dans leur état le plus stable, on note que :
+\begin{equation}
+\Delta_fH_m^0=\sum_j\nu_jH_m^0(j)-\sum_i\nu_iH_m^0(i)
+\end{equation}
+
+\subsection{Cycle de Hess}
+
+L'ensemble de ces équations peut nous permettre de créer un cycle de Hess, ou cycle thermodynamique, qui consiste à créer une succession de réactions équivalentes à une réaction chimique, pour laquelle on veut déterminer une enthalpie de réaction ou de formation. Schématiquement, on pourra avoir :
+
+\begin{figure}[H]
+\centering
+\begin{picture}(10cm,5cm)
+
+	\put(2.3cm,4cm){
+		\vector(1,0){5cm}
+}
+	\put(2.1cm,3.4cm){
+		\vector(1,-1){2.3cm}
+}
+	\put(5.2cm,1.2cm){
+		\vector(1,1){2.3cm}
+}
+	\put(0.8cm,3.9cm){
+  	 \shortstack{Etat A}
+}
+	\put(8cm,3.9cm){
+  	 \shortstack{Etat B}
+}
+	\put(4.3cm,0.5cm){
+ 	  \shortstack{Etat C}
+}
+	\put(4.3cm,4.5cm){
+   	\shortstack{$\Delta_r H^{0}_{1,T}$}
+}
+	\put(1.5cm,2.2cm){
+  	 \shortstack{$\Delta_r H^{0}_{2,T}$}
+}
+	\put(6.5cm,2.2cm){
+   	\shortstack{$\Delta_r H^{0}_{3,T}$}
+}
+
+\end{picture}
+
+\caption{Cycle de Hess}
+
+\end{figure}
+
+Dans cette situation, selon la loi de Hess, on aura :
+\begin{equation}
+\Delta_r H^{0}_{1,T}=\Delta_r H^{0}_{2,T}+\Delta_r H^{0}_{3,T}
+\end{equation}
+
+\subsection{Énergie de liaisons}
+
+Nous pouvons introduire une autre relation s'appuyant sur les \textbf{énergies de liaisons} que nous allons définir.
+
+\begin{definition}[Energie de liaison]
+ Une énergie de liaison correpond à l'énergie nécessaire à apporter pour rompre une liaison, ou l'énergie mise en jeu dans une liaison, et qu'on note $E_{liaison}$. 
+ \end{definition}
+ 
+ Ainsi, pour ces énergies, on pourra introduire les deux relations suivantes :
+\begin{equation}
+\Delta_rH=\sum_i E_{liaison}(i) - \sum_j E_{liaison}(j)
+\end{equation}
+ \begin{equation}
+ \Delta_rU=\sum_j E_{liaison}(j) - \sum_i E_{liaison}(i)
+ \end{equation}
+ 
+\begin{remark}
+ Attention, la relation  avec l'enthalpie est inversée par rapport aux autres relations que l'on avait précédemment ! Ici, on fait la différence entre les énergies de liaisons des réactifs par les produits, contre la différence des produits par les réactifs dans les relations d'enthalpies de réactions ou de formation.
+ \end{remark}
+ 
+ 
+\subsection{Loi de Kirchoff sans changement d'état}
+Pour finir, introduisons les lois de Kirchoff dans le cadre  de réactions sans changements d'état. Ces lois permettent de donner la variation de chaleur entraînée par une réaction.\\
+
+\begin{theorem}[Loi de Kirchoff à pression constante]
+Pour toute réaction sans changements d'états, la dérivée de la variation de réaction de l'enthalpie selon la température est égale à la variation de capacité calorifique à pression constante. Soit
+\begin{eqnarray}
+\frac{d\Delta_rH^{0}_{T}}{dT}=\Delta_rC_{p}^{0}
+\end{eqnarray}
+\end{theorem}
+
+Ainsi, on a 
+
+$$\Delta_rC_{p}^{0} = \sum_{j} \nu_{j}C_{p,j}^{0} - \sum_{i} \nu_{i}C_{p,i}^{0}$$
+$$\Rightarrow \Delta_rH^{0}_{T_1}-\Delta_rH^{0}_{T_2} = \int_{T_1}^{T_2}\Delta_rC_{p}^{0}dT$$
+
+
+\begin{theorem}[Loi de Kirchoff à volume constante]
+Pour toute réaction sans changements d'états, la dérivée de la variation de réaction de l'énergie interne selon la température est égale à la variation de capacité calorifique à volume constant. Soit
+\begin{eqnarray}
+\frac{d\Delta_rH^{0}_{T}}{dT}=\Delta_rC_{p}^{0}
+\end{eqnarray}
+\end{theorem}
+
+Ainsi, on a 
+
+$$\Delta_rC_{v}^{0} = \sum_{j} \nu_{j}C_{v,j}^{0} - \sum_{i} \nu_{i}C_{v,i}^{0}$$
+$$\Rightarrow \Delta_rU^{0}_{T_1}-\Delta_rU^{0}_{T_2} = \int_{T_1}^{T_2}\Delta_rC_{v}^{0}dT$$
+
+\begin{remark}
+Souvent, lorsque l'on applique ces formules, on nous demande la variation d'énergie pour une température donnée, il sera donc judicieux de bien passer la variation d'énergie initiale de l'autre côté de l'équation pour bien faire la somme de l'énergie initialement mis en cause avec la variation de capacité calorifique.
+\end{remark}
