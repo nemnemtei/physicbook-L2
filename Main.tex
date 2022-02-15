@@ -1,0 +1,146 @@
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+
+
+\input{structure.tex} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\usepackage{float}
+\usepackage{sistyle}
+\usepackage{braket}
+\usepackage{amssymb}
+\usepackage[newlinetospace]{titlesec}
+\usepackage{wasysym}
+
+
+
+
+%\hypersetup{pdftitle={Title},pdfauthor={Author}} % Uncomment and fill out to include PDF metadata for the author and title of the book
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty} % Suppress headers and footers on the title page
+\begin{tikzpicture}[remember picture,overlay]
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Concepts physiques en thermodynamique et électromagnétisme\\[15pt] % Book title
+{\Large Deuxième année - Premier semestre}\\[20pt] % Subtitle
+{\huge TEIXEIRA RUA Nemetan}}}; % Author name
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2021 TEIXEIRA RUA Nemetan\\ % Copyright notice
+
+\noindent \textsc{Published by TEXIEIRA RUA Nemetan}\\ % Publisher
+
+%\noindent \textsc{book-website.com}\\ % URL
+
+\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported Licence (CC BY-NC-ND 4.0) You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information, replace this with your own license (if any)
+
+\noindent \textit{Première édition, Décembre 2021}\\ % Printing/edition date
+
+\noindent We will noticed here that the following book is writing with a \LaTeX  templates created and published by Mathias Legrand in March 2019, on the following website : \url{www.latextemplates.com/template/legrand-orange-book}. Some specifics properties of the original document were modified. This templates is under the Creative Commons Attribution-NonCommercial 3.0 Unported License.
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{chapter_head_1.jpeg} % Table of contents heading image
+
+\pagestyle{empty} % Disable headers and footers for the following pages
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right side of the book
+
+\pagestyle{fancy} % Enable headers and footers again
+
+%---------------------------------------------------------------------------------------
+% Content
+%---------------------------------------------------------------------------------------
+
+\import{preface.tex}
+
+\part{Thermodynamique}
+
+\import{\Thermodynamics}{Chapter_T1}
+
+
+\import{\Thermodynamics}{Chapter_T2}
+
+
+\import{\Thermodynamics}{Chapter_T3}
+
+
+\import{\Thermodynamics}{Chapter_T4}
+
+
+\import{\Thermodynamics}{Chapter_T5}
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\chapter*{Bibliographie}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliographie}} % Add a Bibliography heading to the table of contents
+
+
+
+\begin{enumerate}[label=(\arabic*)]
+
+\item ANSERMET, Jean-Philippe et BRÉCHET, Sylvain, 2020a. \textit{Thermodynamique}. 2e éd. revue et augmentée. Lausanne : EPFL press. Traité de physique. ISBN 9782889153381. 536.707 6
+
+\item ANSERMET, Jean-Philippe et BRÉCHET, Sylvain, 2020b. \textit{Thermodynamique: exercices}. Lausanne : EPFL press. Traité de physique. ISBN 9782889153398. 536.707 6
+
+\item CAPPE, Christophe, 2019. \textit{Élec: électro-magnétisme}. Malakoff : Dunod. Fluoresciences. ISBN 9782100780846. 537
+
+\item PISKUNOV, Nikolaj Semènovič, DER MÉGRÉDITCHIAN, Guy et GLOUKHIAN, Edouard, 1993. \textit{Calcul différentiel et intégral}. 12ème éd. Moscou [Paris] : Éd. Mir Ellipses. ISBN 9782729893408. 515.33
+
+\item REUSE, François A., 2012. \textit{Électrodynamique}. Lausanne [Paris] : Presses polytechniques et universitaires romandes [diff. GEODIF]. Traité de physique. ISBN 9782880748784. 537.6
+
+\item VERNIER, Nicolas et EVEN-BEAUDOIN, Catherine, 2020. \textit{Thermo: thermodynamique}. Malakoff : Dunod. Fluoresciences. ISBN 9782100802906. 536.7
+
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+%	LISTES DES FIGURES
+%----------------------------------------------------------------------------------------
+
+\addcontentsline{toc}{chapter}{Liste des figures} 
+
+\listoffigures
+
+
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage % Make sure the index starts on an odd (right side) page
+\phantomsection
+\setlength{\columnsep}{0.75cm} % Space between the 2 columns of the index
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
+\printindex % Output the index
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+
+
