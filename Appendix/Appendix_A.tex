@@ -1,0 +1,126 @@
+\chapter{Définition des équations d'état}
+ Un système est caractérisé par un ensemble de variables d'état, qui ne depédent pas de l'histoire thermodynamique de notre système. On définit par la suite une fonction d'état, dépendant de nos variables d'état et exprimant exclusivement un état.
+
+\section{Dérivées partielles et différentielles d'une fonction}
+
+Définissons ici ce qu'est une dérivées partielles.\\
+
+\begin{definition}[Dérivées partielles]
+Soit une fonction $f(x,y)$ de deux variables $x$ et $y$. Les dérivées partielles par rapport aux variables $x$ et $y$sont définies respectivement comme,
+\begin{eqnarray}
+\frac{\partial f(x,y)}{\partial x}\equiv \lim_{\Delta x \rightarrow0}\frac{f(x+\Delta x, y)-f(x,y)}{\Delta x}\\
+\frac{\partial f(x,y)}{\partial y}\equiv \lim_{\Delta y \rightarrow0}\frac{f(x, y+ \Delta y)-f(x,y)}{\Delta y}
+\end{eqnarray}
+\end{definition}
+
+Le concept est uniquement de dériver selon une variable en maintenant les autres variables constantes.\\
+
+On peut ensuite introduire le concept de différentielle. \\
+
+\begin{definition}[Différentielle]
+Soit une fonction $f(x,y)$ de deux variables $x$ et$y$, la variation de la fonction $f(x,y)$ du point $(x,y)$ au point $(x+\Delta x, y+\Delta y)$, s'écrit :
+ \begin{equation}
+\Delta f(x,y)=f(x+\Delta x, y + \Delta y)-f(x,y)
+\end{equation}
+\end{definition}
+
+On définit ainsi la différentielle $df(x,y)$ comme la limite infinitésimale de la variation $\Delta f(x,y)$, telle que
+\begin{equation}
+df(x,y)\equiv \lim_{\Delta x\rightarrow0} \lim_{\Delta y \rightarrow 0} \Delta f(x,y)
+\end{equation}
+
+Si on reprend la définition donnée en (A.1) et (A.2), on peut réécrire l'expression de notre différentielle.
+\begin{corollary}[Expression de la différentielle]
+On peut réexprimer notre différentielle avec les dérivées partielles telle que
+\begin{equation}
+df(x,y)=\frac{\partial f(x,y)}{\partial x}dx+\frac{\partial f(x,y)}{\partial y}dy
+\end{equation}
+\end{corollary}
+
+Qu'on peut généraliser à $n$ variables d'état, par exemple, pour l'équation des gaz parfaits.
+
+\begin{example}[Différentielle de l'équation des gaz parfaits]
+
+$$V(P,T)=\frac{nRT}{P}$$
+$$\Rightarrow dV=\left ( \frac{\partial V}{\partial P}\right )_T dP+\left ( \frac{\partial V}{\partial T}\right )_P dT$$
+
+\end{example}
+
+\section{Définition d'une équation d'état à partir de paramètres}
+
+Pour déterminer une équation d'état, souvent à partir de paramètres tels que ceux-ci sont des dérivées partielles, il faut introduire deux relations importantes : la valeur nulle de la différentielle d'une fonction d'état et la propriété du produits des dérivées partielles.
+
+\paragraph{Principes mathématiques} 
+
+Par définition, une fonction d'état est définie telle que $f(X_1, X_2, X_3, ...)=0$. Ainsi, sa différentielle est nulle, soit $df=0$, et on peut donc en déduire que les dérivées croisées sont égales entre elles. 
+
+\begin{theorem}[Théorème de Schwartz]
+
+Toute fonction à plusieurs variables continue et dérivable en un point possède des drivées croisées égales telles que
+
+\begin{eqnarray}
+\frac{\partial}{\partial x}\left ( \frac{\partial f(x,y)}{\partial y} \right ) = \frac{\partial}{\partial y}\left ( \frac{\partial f(x,y)}{\partial x} \right ) 
+\end{eqnarray}
+\end{theorem}
+
+
+
+\begin{proposition}[Produit des dérivées partielles]
+Le produit de l'ensemble des dérivées partielles d'une équation d'état est égal à $-1$, soit
+
+\begin{equation}
+\left ( \frac{\partial f(x,y,z)}{\partial x} \right )\left ( \frac{\partial f(x,y,z)}{\partial y} \right )\left ( \frac{\partial f(x,y,z)}{\partial z} \right )=-1
+\end{equation}
+\end{proposition}
+
+\paragraph{Implication thermodynamique des lois mathématiques} 
+
+A partir de ces deux outils, et de l'expression de la différentielle de notre fonction sous la forme donnée à l'équation (A.5), on va pouvoir retrouver notre équation d'état. Pour ce faire, on va :
+\begin{enumerate}
+\item Intégrer l'une des dérivées partielles selon son paramètre de dérivation et en ajoutant une fonction de l'autre paramètre
+\item Dériver selon l'autre paramètre (celui de l'autre dérivée partielle) et on compare à l'autre dérivée partielle
+\item Réintègrer selon ce paramètre et on ajoute une constante
+\end{enumerate}
+
+\pagebreak
+
+
+On peut, ne pas s'y retrouver dans cette liste, alors prenons  un exemple : \\
+
+\begin{example}[Propriétés d'un gaz réel]
+
+{\color{white}Thermodynamics}\\
+
+\fbox{
+\begin{minipage}{0.95\textwidth}
+A partir de l'étude expérimentale des prorpiétés d'un gaz réel pour une mole, on connait :
+$$ \left ( \frac{\partial V}{\partial T} \right )_P = \frac{R}{P} + \frac{a}{T^2} \textrm{  et  } \left ( \frac{\partial V}{\partial P} \right )_T=-T f(P)$$
+$a$ est une constante positive et $f(P)$ une fonction inconnue de la seule pression $P$.
+\begin{enumerate}
+\item Déterminer $f(P)$ en utilisant le fait que $V$ est un fonction d'état.
+\item Déterminer l'équation d'état de ce gaz.
+\end{enumerate}
+\end{minipage}
+}\\
+
+
+\begin{enumerate}
+
+\item On sait que $V$ est une fonction d'état, ce qui veut dire que nos dérivées croisées sont égales. On en déduit que :
+$$\frac{\partial}{\partial P} \left ( \frac{\partial V}{\partial T} \right ) = \frac{\partial}{\partial T} \left ( \frac{\partial V}{\partial P} \right )$$
+$$\Leftrightarrow - \frac{R}{P^2}=-f(P)$$
+$$\Leftrightarrow f(P)=\frac{R}{P^2}$$
+
+\item 
+
+$$dV =  \left ( \frac{\partial V}{\partial T} \right ) dT + \left ( \frac{\partial V}{\partial P} \right ) dP$$
+
+On intègre la première dérivée partielle selon $T$ : 
+$$ V = \frac{RT}{P} - \frac{a}{T}+g(P)$$
+On dérive mais cette fois-ci selon $P$, on obtient :
+$$ \left ( \frac{\partial V}{\partial P} \right ) = -\frac{RT}{P^2}+\frac{\partial g(P)}{\partial P}$$
+ On compare avec la valeur donné dans l'énoncée, on se rend compte qu'ici $g(P)=0$, donc on intègre à nouveau et on obtient :
+$$V = \frac{RT}{P}-\frac{a}{T}~~(+cste)$$
+
+\end{enumerate}
+\end{example}
